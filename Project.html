@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <style>
+      img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+      }
+      h1 {
+        text-align: center;
+        color: #9c7af3;
+      }
+      h2 {
+        text-align: center;
+        font-size: 20px;
+        padding: 15;
+        border: 1px solid #430f58;
+        border-radius: 5px;
+        color: #9c7af3;
+      }
+      .Read {
+        display: block;
+        margin-top: 20px;
+        text-decoration: none;
+      }
+      .Read:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        background: #7d51e8;
+        color: white;
+        font-size: 18px;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 6px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        cursor: pointer;
+        color: aqua;
+      }
+      .section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 15px 20px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 15px;
+        font-family: cursive;
+        text-align: center;
+      }
+      .email {
+        text-decoration: none;
+      }
+      .email:hover {
+        text-decoration: underline;
+      }
+      body {
+        background-color: #bad8b6;
+      }
+      span.females {
+        font-weight: bold;
+        color: #552e5a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <h1>Passionate about Netball?</h1>
+      <h2>⚠️Warning you may constantly talk about Netball</h2>
+      <img
+        src="https://www.gilbert-netball.com/cdn/shop/articles/Kalifa_All_Hallows_School.jpg?v=1576600754&width=1500"
+        width="200"
+      />
+      <hr />
+      <p>
+        Like all activity, netball gets children and adults out of the house and
+        moving. Instead of sitting watching TV or playing on the computer,
+        children have the chance to run around on court with other individuals
+        their age which brings a huge variety of benefits both physically and
+        mentally. Catching and passing a ball each week will also help with
+        children's hand eye coordination and build strength in their upper body.
+        <br />
+      </p>
+      <a
+        href="https://www.gilbert-netball.com/blogs/netball/why-your-child-should-play-netball#:~:text=Netball%20is%20a%20great%20sport,Cart"
+        target="_blank"
+        class="Read"
+      >
+        <strong> <em>Read more</em></strong></a
+      >
+      <button>sign-Up</button>
+      <p class="footer">
+        For enquires email
+        <a
+          href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=jrjtWvMnQHbtHSLptbbrbDpnPpJPSjHvfFvdVgNnpVdWdlwhJdbCVsnFfmHVZMngWVVndtTl"
+          class="email"
+        >
+          zetulucysithole@gmail.com
+        </a>
+      </p>
+    </div>
+    <script>
+      function signUp() {
+        let name = prompt("What is your name?");
+        let age = prompt("What is your age?");
+        if (age > 13) {
+          let h2 = document.querySelector("h2");
+          h2.innerHTML =
+            "Thank you " + name + ",We welcome you to our team queen👑!";
+        } else {
+          if (age < 12) {
+            let h2 = document.querySelector("h2");
+            h2.innerHTML =
+              "Thank you " + name + ",we welcome you to our team princess👸!";
+          }
+        }
+      }
+      let signUpButton = document.querySelector("button");
+      signUpButton.addEventListener("click", signUp);
+    </script>
+  </body>
+</html>
